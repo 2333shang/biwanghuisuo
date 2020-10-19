@@ -38,7 +38,7 @@ public class HelloController {
 	
 	@RequestMapping("/localbushu")
 	public String localbushu() {
-		return SSHHelper.exec("62.234.30.21", "root", "Bwhs2020!", 8080, "ls");
+		return SSHHelper.exec("62.234.30.21", "root", "Bwhs2020!", 22, "ls");
 	}
 	
 	@RequestMapping("/cmd")

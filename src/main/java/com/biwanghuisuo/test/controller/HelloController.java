@@ -47,11 +47,11 @@ public class HelloController {
 		String result1 = SSHHelper.execCmd("cmd /c D:");
 		String result2 = SSHHelper.execCmd("cmd /c cd D:\\project\\STSProject\\biwanghuisuo");
 		String result3 = SSHHelper.execCmd("cmd /c git add .");
-		System.out.println(result3);
+		System.out.println("添加成功：" + result3 + "\n");
 		String result4 = SSHHelper.execCmd("cmd /c git commit -m \"java test git commit\"");
-		System.out.println(result4);
+		System.out.println("提交成功：" + result4 + "\n");
 		String result5 = SSHHelper.execCmd("cmd /c cd git push -u origin master");
-		System.out.println(result5);
+		System.out.println("推送成功：" + result5 + "\n");
 		
 		return result3 + ":" + result4 + ":" + result5;
 	}

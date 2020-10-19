@@ -50,7 +50,7 @@ public class HelloController {
 		System.out.println("添加成功：" + result3 + "\n");
 		String result4 = SSHHelper.execCmd("cmd /c git commit -m \"java test git commit\"");
 		System.out.println("提交成功：" + result4 + "\n");
-		String result5 = SSHHelper.execCmd("cmd /c cd git push -u origin master");
+		String result5 = SSHHelper.execCmd("cmd /c git push -u origin master");
 		System.out.println("推送成功：" + result5 + "\n");
 		
 		return result3 + ":" + result4 + ":" + result5;

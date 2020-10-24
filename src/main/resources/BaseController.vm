@@ -1,0 +1,14 @@
+package $package;
+
+import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RestController;
+
+@RestController
+@RequestMapping("/${className}")
+public class ${className}Controller{
+
+    @RequestMapping("/$request")
+    public String  $request(){
+        return "Hello you create ${request}.class by velocity!\n you want to say is $say";
+    }
+}

@@ -81,6 +81,7 @@ public class CreateController {
     	
         HttpHeaders headers = new HttpHeaders();
         headers.add("Content-Disposition", "attchement;filename=" + controller + "Controller.java");
+        headers.add("Content-Type", "application/json;charset=utf-8");
         HttpStatus statusCode = HttpStatus.OK;
         ResponseEntity<byte[]> entity = new ResponseEntity<>(sw.toString().getBytes(), headers, statusCode);
         return entity;

@@ -1,4 +1,4 @@
-package com.biwanghuisuo.test.controller;
+package com.biwanghuisuo.test.velocity;
 
 import org.apache.velocity.Template;
 import org.apache.velocity.VelocityContext;

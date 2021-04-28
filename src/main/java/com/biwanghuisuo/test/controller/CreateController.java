@@ -58,6 +58,11 @@ public class CreateController {
         fos.write(sw.toString().getBytes());
         response.setContentType("text/html;charset=utf-8");
         response.getWriter().write(sw.toString());
+        String result1 = SSHHelper.execCmd("cmd /c D:");
+        SSHHelper.execCmd("cmd /c cd " + orignalpath);
+        SSHHelper.execCmd("cmd /c maven clean");
+        System.out.println(SSHHelper.execCmd("cmd /c maven install"));
+        System.out.println("install success!");
     }
     
     @RequestMapping("/createFile")
@@ -81,7 +86,7 @@ public class CreateController {
     	
         HttpHeaders headers = new HttpHeaders();
         headers.add("Content-Disposition", "attchement;filename=" + controller + "Controller.java");
-        headers.add("Content-Type", "application/json;charset=utf-8");
+//        headers.add("Content-Type", "application/json;charset=utf-8");
         HttpStatus statusCode = HttpStatus.OK;
         ResponseEntity<byte[]> entity = new ResponseEntity<>(sw.toString().getBytes(), headers, statusCode);
         return entity;
